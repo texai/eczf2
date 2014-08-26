@@ -3,8 +3,64 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "15ba4c231ed142547cba859240c919ab",
+    "hash": "7d17d9b4951119f59e04620cc95f8ded",
     "packages": [
+        {
+            "name": "eddiejaoude/zf2-logger",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eddiejaoude/zf2-logger.git",
+                "reference": "3ef51298f623697ca5eaff9b0fc1b129ecb9ddc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eddiejaoude/zf2-logger/zipball/3ef51298f623697ca5eaff9b0fc1b129ecb9ddc8",
+                "reference": "3ef51298f623697ca5eaff9b0fc1b129ecb9ddc8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "zendframework/zend-di": "2.*",
+                "zendframework/zend-eventmanager": "2.*",
+                "zendframework/zend-log": "2.*",
+                "zendframework/zend-mvc": "2.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "dev-master",
+                "zendframework/zendframework": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EddieJaoude\\Zf2Logger\\": "src/Zf2Logger"
+                },
+                "classmap": [
+                    "Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eddie Jaoude",
+                    "email": "eddie@jaoudestudios.com"
+                }
+            ],
+            "description": "Zend Framework 2 Logger - request & response log",
+            "keywords": [
+                "log",
+                "logger",
+                "zend",
+                "zend framework 2",
+                "zf2"
+            ],
+            "time": "2014-06-07 08:10:29"
+        },
         {
             "name": "facebook/php-sdk-v4",
             "version": "4.0.10",

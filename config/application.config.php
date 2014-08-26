@@ -3,6 +3,9 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
+//        'Api',
+//        'Admin',
+//        'Cron',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -21,6 +24,11 @@ return array(
         // provided by modules themselves. Paths may use GLOB_BRACE notation.
         'config_glob_paths' => array(
             'config/autoload/{,*.}{global,local}.php',
+            // emailing.local.php
+            // emailing.global.php
+            // cache.global.php
+            // segurity.local.php
+            // local.segurity.php // NO lo va a cargar
         ),
 
         // Whether or not to enable a configuration cache.
