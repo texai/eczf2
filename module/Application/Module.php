@@ -31,9 +31,45 @@ class Module
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+                    'Application' => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
         );
     }
+    
+    
+    public function getServiceConfig() {
+        return array(
+            'invokables' => array(
+                'ContactoForm' => 'Application\Ec\Unt\Form\Contacto',
+                'ContactoFormGeneradorCampo' => 'Application\Ec\Unt\Form\GeneradorCampo',
+                'AlmacenLima' => 'Application\Ec\Unt\Model\Almacen\Lima',
+                'AlmacenTrujillo' => 'Application\Ec\Unt\Model\Almacen\Trujillo'
+            ),
+            'initializers' => array(
+                'Application\Ec\Unt\Form\ContactoInitializer'
+            ),
+            'abstract_factories' => array(
+                'Application\Ec\Unt\Form\ContactoAbstractFactory'
+            ),
+            'aliases' => array(
+                'cffc' => 'ContactFormFactoryClass'
+            ),
+            'factories' => array(
+                'ContactFormFactory' => function(){
+                    $form = new Ec\Unt\Form\Contacto();
+                    $form->setCampo('Mensaje');
+                    return $form;
+                },
+                'ContactFormFactoryClass' => 'Application\Ec\Unt\Form\ContactoFactory',
+                
+            ),
+            'shared' => array(
+                'ContactFormFactoryClass' => false
+            ),            
+        );
+    }
+    
+    
+    
 }

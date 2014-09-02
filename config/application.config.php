@@ -28,7 +28,7 @@ return array(
             // emailing.global.php
             // cache.global.php
             // segurity.local.php
-            // local.segurity.php // NO lo va a cargar
+            // local.security.php // NO lo va a cargar
         ),
 
         // Whether or not to enable a configuration cache.
