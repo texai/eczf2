@@ -23,4 +23,13 @@ class IndexController extends AbstractActionController
         return $view;
     }
     
+    
+    public function configAction(){
+        $view = new ViewModel();
+        $sl = $this->getServiceLocator();
+        $config = $sl->get('config');
+        $view->config = $config;
+        return $view;
+    }
+    
 }
