@@ -41,6 +41,10 @@ class Module
     public function getServiceConfig() {
         return array(
             'factories' => array(
+                'AuthService' => function(){
+                    $authAdapter = new \Zend\Authentication\Adapter\DbTable($zendDb);
+                    $auth = new \Zend\Authentication\AuthenticationService();
+                }
             ),
         );
     }

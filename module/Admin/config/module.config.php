@@ -67,6 +67,7 @@ return array(
         ),
     ),
     'view_manager' => array(
+        'base_path' => 'http://local.eczf2.pe/',
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
@@ -74,6 +75,7 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/Admin'           => __DIR__ . '/../view/layout/layout.phtml',
+            'login'           => __DIR__ . '/../view/layout/login.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',

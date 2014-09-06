@@ -30,7 +30,7 @@ class Module
             $templatePathResolver = $sm->get('Zend\View\Resolver\TemplatePathStack'); 
             $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  strtolower($module).'/view')));
             
-        });
+        },10);
         
         
     }
