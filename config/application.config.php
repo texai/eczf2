@@ -5,6 +5,7 @@ return array(
 //        'Api',
         'Admin',
         'Application',
+        'TemaDb',
 //        'Cron',
     ),
 

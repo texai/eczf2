@@ -28,7 +28,7 @@ class Module
             $module = substr($controllerClass, 0, strpos($controllerClass, '\\'));
             $controller->layout('layout/'. $module); 
             $templatePathResolver = $sm->get('Zend\View\Resolver\TemplatePathStack'); 
-            $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  strtolower($module).'/view')));
+            $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  $module.'/view')));
             
         },10);
         
@@ -45,7 +45,7 @@ class Module
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    'Application' => __DIR__ . '/src/' . __NAMESPACE__,
+                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
             ),
         );
