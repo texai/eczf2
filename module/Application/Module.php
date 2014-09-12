@@ -20,15 +20,20 @@ class Module
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
         
-        
+        /**
+         * Setea el layout correcto
+         * Y establece el Template Path
+         */
         $eventManager->getSharedManager()->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e){
             $controller = $e->getTarget();
             $sm = $controller->getServiceLocator();
             $controllerClass = get_class($controller);
             $module = substr($controllerClass, 0, strpos($controllerClass, '\\'));
-            $controller->layout('layout/'. $module); 
-            $templatePathResolver = $sm->get('Zend\View\Resolver\TemplatePathStack'); 
-            $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  $module.'/view')));
+            if($module == 'Admin' || $module == 'Application'){
+                $controller->layout('layout/'. $module); 
+                $templatePathResolver = $sm->get('Zend\View\Resolver\TemplatePathStack'); 
+                $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  $module.'/view')));
+            }
             
         },10);
         
