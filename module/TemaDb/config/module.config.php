@@ -96,6 +96,6 @@ return array(
         'username' => 'root',
         'password' => '',
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=czf2_dev;host=127.0.0.1',
+        'dsn' => 'mysql:dbname=eczf2_dev;host=127.0.0.1',
     )
 );
