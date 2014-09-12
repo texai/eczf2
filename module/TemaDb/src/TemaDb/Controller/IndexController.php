@@ -106,7 +106,7 @@ class IndexController extends AbstractActionController
         $rsPrototype = new ResultSet();
         $rsPrototype->setArrayObjectPrototype(new Categoria());
         $tableGateway = new TableGateway('categoria', $adapter, null, $rsPrototype);
-        $view->data = $tableGateway->select("nombre LIKE '%2%'");
+        $view->data = $tableGateway->select("nombre LIKE '%au%'");
         return $view;
     }
     
@@ -117,12 +117,12 @@ class IndexController extends AbstractActionController
     public function tableGatewaySelectArrayAction()
     {
         $view = new ViewModel();
-//        $sl = $this->getServiceLocator();
+        $sl = $this->getServiceLocator();
         $adapter = $sl->get('dbadapter');
         $rsPrototype = new ResultSet();
         $rsPrototype->setArrayObjectPrototype(new Categoria());
         $tableGateway = new TableGateway('categoria', $adapter, null, $rsPrototype);
-        $view->data = $tableGateway->select(array("nombre NOT LIKE '%cat%'",'id<?'=>5));
+        $view->data = $tableGateway->select(array("nombre LIKE '%e%'",'id < ?'=>2));
         return $view;
     }
     
@@ -142,8 +142,8 @@ class IndexController extends AbstractActionController
         $rsPrototype->setArrayObjectPrototype(new Categoria());
         $tableGateway = new TableGateway('categoria', $adapter, null, $rsPrototype);
         $view->data = $tableGateway->select(function (Select $sel){
-            $sel->where("nombre LIKE '%1%'")
-                ->where("nombre LIKE '%2%'", PredicateSet::OP_OR)
+            $sel->where("id LIKE '%1%'")
+                ->where("nombre LIKE '%Audio%'", PredicateSet::OP_OR)
             ;
         });
         return $view;
@@ -208,7 +208,8 @@ class IndexController extends AbstractActionController
                 array('pr'=>'proveedor'),
                 'pr.id=producto.proveedor_id',
                 array('proveedor'=>'nombre')
-            )->limit(1);
+            )->where("producto.nombre LIKE '%a%'")
+            ->limit(23);
             
 //            var_dump($select->getSqlString());
 //            exit;
@@ -238,7 +239,7 @@ class IndexController extends AbstractActionController
         $adapter = $sl->get('dbadapter');
         $tableGateway = new TableGateway('categoria', $adapter);
         $tableGateway->update(array(
-            'nombre'=> 'Cat '.rand(111,999),
+            'nombre'=> 'Cat UPDATED'.rand(111,999),
             'creado'=> date('Y-m-d H:i:s'),
             'activo'=> rand(0,1),
         ),array('id'=>  rand(3, 6)));
