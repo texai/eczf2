@@ -37,6 +37,19 @@ return array(
                             'defaults' => array(
                             ),
                         ),
+                        'may_terminate' => true,
+                        'child_routes' => array(
+                            'id' => array(
+                                'type'    => 'Segment',
+                                'options' => array(
+                                    'route'    => '/:id',
+                                    'constraints' => array(
+                                        'id'         => '[0-9]*',
+                                    ),
+                                    'defaults' => array(),
+                                ),
+                            ),
+                        ),
                     ),
                 ),
             ),
@@ -64,6 +77,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Admin\Controller\Index' => 'Admin\Controller\IndexController',
+            'Admin\Controller\Categoria' => 'Admin\Controller\CategoriaController',
         ),
     ),
     'view_manager' => array(

@@ -3,50 +3,21 @@ namespace Admin\InputFilter;
 
 use Zend\InputFilter\InputFilter;
 
-class Login extends InputFilter{
+class Categoria extends InputFilter{
     
     public function __construct() {
         
-        $login = new \Zend\InputFilter\Input('login');
+        $nombre = new \Zend\InputFilter\Input('nombre');
         
         $v = new \Zend\Validator\StringLength(array('min'=>3,'max'=>20, 'encoding'=>'UTF-8'));
-        $login->getValidatorChain()->attach($v);
-        
-//        $v = new \Zend\Validator\Db\NoRecordExists();
-//        $login->getValidatorChain()->attach($v);
+        $nombre->getValidatorChain()->attach($v);
         
         $f = new \Zend\Filter\StringTrim();
-        $login->getFilterChain()->attach($f);
+        $nombre->getFilterChain()->attach($f);
         
-        $f = new \Zend\Filter\Callback(function($value){
-            return $value.'!';
-        });
-        $login->getFilterChain()->attach($f);
-        
-        $f = new \Admin\Filter\Word\SeparatorToDashSpanish();
-        $login->getFilterChain()->attach($f);
-        
-        $f = new \Zend\Filter\StringToUpper();
-        $login->getFilterChain()->attach($f);
-        
-        $this->add($login);
+        $this->add($nombre);
         
 
-        
-        
-        $pwd = new \Zend\InputFilter\Input('pwd');
-        
-        $v = new \Zend\Validator\StringLength(array('min'=>3,'max'=>20, 'encoding'=>'UTF-8'));
-        $pwd->getValidatorChain()->attach($v);
-        
-        $this->add($pwd);
-        
-        
-//        $token = new \Zend\InputFilter\Input('token');
-//        $v = new \Zend\Validator\Csrf();
-//        $token->getValidatorChain()->attach($v);
-//        $this->add($token);
-        
 
     }
     

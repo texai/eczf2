@@ -263,9 +263,9 @@ class IndexController extends AbstractActionController
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
         $categoria = $sl->get('TemaDb\Model\CategoriaTable');
-        $producto = $sl->get('TemaDb\Model\ProductoTable');
-//        $view->data = $categoria->fetchAll();
-        $view->data = $producto->listarProductosCompleto();
+//        $producto = $sl->get('TemaDb\Model\ProductoTable');
+        $view->data = $categoria->fetchAll();
+//        $view->data = $producto->listarProductosCompleto();
         return $view;
     }
     

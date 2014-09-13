@@ -1,6 +1,6 @@
 <?php
 
-namespace TemaDb\Model;
+namespace Admin\Model;
 
 class Producto {
 

@@ -1,79 +1,116 @@
 <?php
-/**
- * Zend Framework (http://framework.zend.com/)
- *
- * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
- */
 
 namespace Admin\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractActionController
+class CategoriaController extends AbstractActionController
 {
     public function indexAction()
     {
         $view = new ViewModel();
-        
-        $view->portal = 'ADMIN!';
-        
+        $sl = $this->getServiceLocator();
+        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+        $view->rows = $mCategoria->fetchAll();
         return $view;
     }
     
-    public function loginAction()
-    {
-        $this->layout('login');
-        $sl = $this->getServiceLocator();
-        $vhm = $sl->get('viewHelperManager');
-        $basePath = $vhm->get('basePath');
-        $helperHeadLink = $vhm->get('headLink');
-        $helperHeadLink->appendStylesheet($basePath('/css/login-admin.css'));
-        $helperHeadtitle = $vhm->get('headTitle');
-        $helperHeadtitle->append('LOGIN');
-        $helperHeadScript = $vhm->get('headScript');
-        $helperHeadScript->appendFile(
-                $basePath('/js/fixie7.js'),
-                'text/javascript',
-                array('conditional' => 'lt IE 7')
-        );
-
+    public function nuevoAction() {
         $view = new ViewModel();
-
-        
-        $formLogin = new \Admin\Form\Login();
-        $inputFilterLogin = new \Admin\InputFilter\Login();
-        $formLogin->setInputFilter($inputFilterLogin);
-        $formLogin->prepare();
-        
-        if($this->getRequest()->isPost()){
-            $data = $this->params()->fromPost();
-            $formLogin->setData($data);
-            if($formLogin->isValid()){
-                
-                $auth = $sl->get('AuthService');
-                
-            }else{
-                var_dump($formLogin->getMessages());
+        $sl = $this->getServiceLocator();
+        $form = new \Admin\Form\Categoria();
+        $if = new \Admin\InputFilter\Categoria();
+        $form->setInputFilter($if);
+        $view->form = $form;
+        $req = $this->getRequest();
+        if($req->isPost()){
+            $data = $req->getPost();
+            var_dump($data);
+            $form->setData($data);
+            if($form->isValid()){
+                $values = $form->getData();
+                /* @var $mCategoria \Admin\Model\CategoriaTable */
+                $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+                $categoria = new \Admin\Model\Categoria();
+                $categoria->exchangeArray($values);
+                $mCategoria->grabar($categoria);
+                $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
             }
             
         }
-        
-        
-        $view->form = $formLogin;
-        
         return $view;
     }
     
-    
-    public function configAction(){
+    public function editarAction() {
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
-        $config = $sl->get('config');
-        $view->config = $config;
-        return $view;
+        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+        $form = new \Admin\Form\Categoria();
+        $if = new \Admin\InputFilter\Categoria();
+        
+        $id = $this->params()->fromRoute('id', -1);
+        if($id == -1){
+            $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+        }
+        
+        $form->setData($mCategoria->getById($id)->toArray());
+        $form->get('enviar')->setValue('Editar');
+        
+        $form->setInputFilter($if);
+        $view->form = $form;
+        $req = $this->getRequest();
+        if($req->isPost()){
+            $data = $req->getPost();
+            $form->setData($data);
+            if($form->isValid()){
+                $values = $form->getData();
+                $categoria = new \Admin\Model\Categoria();
+                $categoria->exchangeArray($values);
+                $mCategoria->editar($categoria,$id);
+                $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+            }
+            
+        }
+        return $view;        
+    }
+    
+    public function activarAction() {
+        $sl = $this->getServiceLocator();
+        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+        $id = $this->params()->fromRoute('id', -1);
+        if($id == -1){
+            $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+        }
+        $mCategoria->setActivo(true,$id);
+        $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+    }
+    
+    public function desactivarAction() {
+        $sl = $this->getServiceLocator();
+        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+        $id = $this->params()->fromRoute('id', -1);
+        if($id == -1){
+            $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+        }
+        $mCategoria->setActivo(false,$id);
+        $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+    }
+    
+    public function borrarAction() {
+        $sl = $this->getServiceLocator();
+        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $mCategoria = $sl->get('Admin\Model\CategoriaTable');
+        $id = $this->params()->fromRoute('id', -1);
+        if($id == -1){
+            $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+        }
+        $mCategoria->borrar($id);
+        $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
     }
     
 }

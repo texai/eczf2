@@ -1,21 +1,31 @@
 <?php
 
+
 namespace Admin\Model;
 
-class Categoria {
+class Proveedor {
     
     protected $id;
     protected $nombre;
+    protected $ruc;
+    protected $email;
     protected $creado;
     protected $activo;
-    
-    
+
     public function getId() {
         return $this->id;
     }
 
     public function getNombre() {
         return $this->nombre;
+    }
+
+    public function getRuc() {
+        return $this->ruc;
+    }
+
+    public function getEmail() {
+        return $this->email;
     }
 
     public function getCreado() {
@@ -34,6 +44,14 @@ class Categoria {
         $this->nombre = $nombre;
     }
 
+    public function setRuc($ruc) {
+        $this->ruc = $ruc;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
+    }
+
     public function setCreado($creado) {
         $this->creado = $creado;
     }
@@ -42,36 +60,16 @@ class Categoria {
         $this->activo = $activo;
     }
 
-
     public function exchangeArray(array $data)
     {
         $this->id       = (isset($data['id'])) ? $data['id']: null;
         $this->nombre   = (isset($data['nombre'])) ? $data['nombre']: null;
+        $this->ruc      = (isset($data['ruc'])) ? $data['ruc']: null;
+        $this->email    = (isset($data['email'])) ? $data['email']: null;
         $this->creado   = (isset($data['creado'])) ? $data['creado']: null;
         $this->activo   = (isset($data['activo'])) ? $data['activo']: null;
     }
     
-    public function toArray($partial = false) {
-        $arr = array(
-            'id'            => $this->getId(),
-            'nombre'        => $this->getNombre(),
-            'creado'        => $this->getCreado(),
-            'activo'        => $this->getActivo(),
-        );
-        if($partial){
-            foreach ($arr as $key => $value) {
-                if(is_null($value)){
-                    unset($arr[$key]);
-                }
-            }
-        }
-        return $arr;
-        
-    }    
-    
-    public function isImportacion(){
-        return rand(0,1);
-    }
-    
+
     
 }

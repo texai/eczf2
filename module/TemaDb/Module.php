@@ -13,6 +13,8 @@ use TemaDb\Model\Categoria;
 use TemaDb\Model\CategoriaTable;
 use TemaDb\Model\Producto;
 use TemaDb\Model\ProductoTable;
+use TemaDb\Model\Proveedor;
+use TemaDb\Model\ProveedorTable;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Mvc\ModuleRouteListener;
@@ -50,13 +52,6 @@ class Module
     public function getServiceConfig() {
         return array(
             'factories' => array(
-                'servicio' => function(){
-                    $obj = new \stdClass();
-                    $obj->sd = 123;
-                    $obj->nombreServicio = 'Ejemplo';
-                    return $obj;
-                },
-                        
                 'TemaDb\Model\CategoriaTable' => function($sl){
                     $gateway = $sl->get('CategoriaTableGateway');
                     $table = new CategoriaTable($gateway);
@@ -82,11 +77,20 @@ class Module
                     $tableGateway = new TableGateway('producto', $adapter, null, $rsPrototype);
                     return $tableGateway;
                 },
-                'online_acl' => function($sl){
-                    $o = new \stdClass();
-                    $o->hola = 'mundo';
-                    return $o;
+
+                'TemaDb\Model\ProveedorTable' => function($sl){
+                    $gateway = $sl->get('ProveedorTableGateway');
+                    $table = new ProveedorTable($gateway,$sl);
+                    return $table;
                 },
+                'ProveedorTableGateway' => function($sl) {
+                    $adapter = $sl->get('dbadapter');
+                    $rsPrototype = new ResultSet();
+                    $rsPrototype->setArrayObjectPrototype(new Proveedor());
+                    $tableGateway = new TableGateway('proveedor', $adapter, null, $rsPrototype);
+                    return $tableGateway;
+                },
+
                         
             ),
         );

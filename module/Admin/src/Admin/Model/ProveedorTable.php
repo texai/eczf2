@@ -1,11 +1,10 @@
 <?php
 
-namespace TemaDb\Model;
+namespace Admin\Model;
 
 use Zend\Db\TableGateway\TableGateway;
-use Zend\Db\Sql\Select;
 
-class ProductoTable {
+class ProveedorTable {
     
     private $tableGateway;
     private $sl;
@@ -17,27 +16,6 @@ class ProductoTable {
     
     public function fetchAll(){
         return $this->tableGateway->select();
-    }
-    
-    public function listarProductosCompleto(){
-        return $this->tableGateway->select(function (Select $select){
-            $select->columns(array(
-                'id',
-                'producto' => 'nombre',
-                'costo'=>'precio_compra',
-                'precio'=>'precio_venta'
-            ))
-            ->join(
-                array('c'=>'categoria'),
-                'c.id=producto.categoria_id',
-                array('categoria'=>'nombre')
-            )->join(
-                array('pr'=>'proveedor'),
-                'pr.id=producto.proveedor_id',
-                array('proveedor'=>'nombre')
-            );
-            
-        });
     }
    
 }

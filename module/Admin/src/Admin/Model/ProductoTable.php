@@ -1,6 +1,6 @@
 <?php
 
-namespace TemaDb\Model;
+namespace Admin\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\Sql\Select;

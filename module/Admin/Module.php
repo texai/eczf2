@@ -11,6 +11,16 @@ namespace Admin;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
+
+use Admin\Model\Categoria;
+use Admin\Model\CategoriaTable;
+use Admin\Model\Producto;
+use Admin\Model\ProductoTable;
+use Admin\Model\Proveedor;
+use Admin\Model\ProveedorTable;
+
 
 class Module
 {
@@ -44,7 +54,46 @@ class Module
                 'AuthService' => function(){
                     $authAdapter = new \Zend\Authentication\Adapter\DbTable($zendDb);
                     $auth = new \Zend\Authentication\AuthenticationService();
-                }
+                },
+
+                'Admin\Model\CategoriaTable' => function($sl){
+                    $gateway = $sl->get('AdminCategoriaTableGateway');
+                    $table = new CategoriaTable($gateway);
+                    return $table;
+                },
+                'AdminCategoriaTableGateway' => function($sl) {
+                    $adapter = $sl->get('dbadapter');
+                    $rsPrototype = new ResultSet();
+                    $rsPrototype->setArrayObjectPrototype(new Categoria());
+                    $tableGateway = new TableGateway('categoria', $adapter, null, $rsPrototype);
+                    return $tableGateway;
+                },
+                        
+                'Admin\Model\ProductoTable' => function($sl){
+                    $gateway = $sl->get('AdminProductoTableGateway');
+                    $table = new ProductoTable($gateway,$sl);
+                    return $table;
+                },
+                'AdminProductoTableGateway' => function($sl) {
+                    $adapter = $sl->get('dbadapter');
+                    $rsPrototype = new ResultSet();
+                    $rsPrototype->setArrayObjectPrototype(new Producto());
+                    $tableGateway = new TableGateway('producto', $adapter, null, $rsPrototype);
+                    return $tableGateway;
+                },
+
+                'Admin\Model\ProveedorTable' => function($sl){
+                    $gateway = $sl->get('AdminProveedorTableGateway');
+                    $table = new ProveedorTable($gateway,$sl);
+                    return $table;
+                },
+                'AdminProveedorTableGateway' => function($sl) {
+                    $adapter = $sl->get('dbadapter');
+                    $rsPrototype = new ResultSet();
+                    $rsPrototype->setArrayObjectPrototype(new Proveedor());
+                    $tableGateway = new TableGateway('proveedor', $adapter, null, $rsPrototype);
+                    return $tableGateway;
+                },                
             ),
         );
     }
