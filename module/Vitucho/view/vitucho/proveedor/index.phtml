@@ -1,0 +1,68 @@
+<a class="btn btn-default" href="<?=$this->url('vitucho/default',array('controller'=>'index','action'=>'index'))?>">Back</a>
+<a class="btn btn-primary" href="<?=$this->url('vitucho/default',array('controller'=>'proveedor','action'=>'nuevo'))?>">Nuevo</a>
+
+
+<div class="row">
+    <h1>Admin - Proveedor</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Proveedor</th>
+                <th>RUC</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <? foreach ($this->rows as $row): ?>
+            <tr class="<?=$row->getActivo()?'activo':'inactivo'?>">
+                <? $id = $row->getId() ?>
+                <td><?=$row->getNombre()?></td>
+                <td><?=$row->getRuc()?></td>
+                <td><?=$row->getEmail()?></td>
+                <td>
+                    <? $base = array('controller'=>'proveedor','id'=>$id) ?>
+                    <? $url = $this->url('vitucho/default/id',  array_merge($base,array('action'=>'editar'))) ?>
+                    <a href="<?=$url?>" class="btn btn-primary btn-xs">editar</a>
+                    
+                    <? if(!$row->getActivo()): ?>
+                        <? $url = $this->url('vitucho/default/id',  array_merge($base,array('action'=>'activar'))) ?>
+                        <a onclick="return confirm('Seguro?')" href="<?=$url?>" class="btn btn-primary btn-xs">activar</a>
+                    <? else: ?>
+                        <? $url = $this->url('vitucho/default/id',  array_merge($base,array('action'=>'desactivar'))) ?>
+                        <a onclick="return confirm('Seguro?')" href="<?=$url?>" class="btn btn-primary btn-xs">desactivar</a>
+                    <? endif; ?>
+                    
+                    <? $url = $this->url('vitucho/default/id',  array_merge($base,array('action'=>'borrar'))) ?>
+                    <a onclick="return confirm('Seguro?')" href="<?=$url?>" class="btn btn-warning btn-xs">borrar</a>
+                </td>
+            </tr>
+            <? endforeach; ?>
+        </tbody>
+    </table>
+    
+     <?php 
+//    echo $this->paginationControl(
+//            // el objeto paginador
+//        $albums,
+//            // estilo
+//        'sliding',
+//            // el partial del control paginador
+//        array('vitucho/proveedor/_pag.phtml','Vitucho'),
+//            // La ruta de los enlaces
+//        array(
+//            'route' => 'Vitucho'
+//        )
+//    ); 
+    ?>
+    
+</div>
+
+<style>
+    table tbody tr.activo {
+        background-color: lightgreen;
+    }
+    table tbody tr.inactivo {
+        background-color: salmon;
+    }
+</style>

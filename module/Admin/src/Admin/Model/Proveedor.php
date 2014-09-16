@@ -70,6 +70,25 @@ class Proveedor {
         $this->activo   = (isset($data['activo'])) ? $data['activo']: null;
     }
     
+    public function toArray($partial = false) {
+        $arr = array(
+            'id'            => $this->getId(),
+            'nombre'        => $this->getNombre(),
+            'ruc'           => $this->getRuc(),
+            'email'         => $this->getEmail(),
+            'creado'        => $this->getCreado(),
+            'activo'        => $this->getActivo(),
+        );
+        if($partial){
+            foreach ($arr as $key => $value) {
+                if(is_null($value)){
+                    unset($arr[$key]);
+                }
+            }
+        }
+        return $arr;
+        
+    }  
 
     
 }
