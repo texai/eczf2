@@ -41,13 +41,6 @@ class Login extends InputFilter{
         
         $this->add($pwd);
         
-        
-//        $token = new \Zend\InputFilter\Input('token');
-//        $v = new \Zend\Validator\Csrf();
-//        $token->getValidatorChain()->attach($v);
-//        $this->add($token);
-        
-
     }
     
 }
