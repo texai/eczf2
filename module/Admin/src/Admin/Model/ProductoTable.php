@@ -47,7 +47,8 @@ class ProductoTable {
     public function grabar(\Admin\Model\Producto $producto){
         $data = $producto->toArray();
         $extra = array(
-            //'creado' => date('Y-m-d H:i:s'),
+            'categoria_id' => 1,
+            'proveedor_id' => 1,
             'activo' => 1,
         );
         $this->tableGateway->insert(array_merge($data,$extra));
