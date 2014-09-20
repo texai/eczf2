@@ -2,13 +2,15 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
-//        'Api',
+//        'Api', 
         'Admin',
-        'Application',
+        'Application',        
         'TemaDb',
         'Karina',
         'TemaPaginator',
         'Vitucho',
+//        'TemaDb',        
+        'HelmutProducto',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

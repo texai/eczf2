@@ -19,6 +19,10 @@ class ProductoTable {
         return $this->tableGateway->select();
     }
     
+    public function getById($id) {
+        return $this->tableGateway->select(array('id=?'=>$id))->current();
+    }
+    
     public function listarProductosCompleto(){
         return $this->tableGateway->select(function (Select $select){
             $select->columns(array(
@@ -40,4 +44,15 @@ class ProductoTable {
         });
     }
    
+     public function editar(\Admin\Model\Producto $producto, $id) {
+        $this->tableGateway->update($producto->toArray(true), array('id=?'=>$id));
+    }
+    
+    public function setActivo($flag, $id) {
+        $this->tableGateway->update(array('activo'=>(int)$flag), array('id=?'=>$id));
+    }
+    
+    public function borrar($id) {
+        $this->tableGateway->delete(array('id=?'=>$id));
+    }
 }

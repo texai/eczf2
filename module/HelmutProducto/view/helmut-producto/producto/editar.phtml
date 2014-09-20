@@ -1,0 +1,14 @@
+<h3>Editar Producto</h3>
+
+
+<a class="btn btn-default" href="<?=$this->url('helmut-producto/default',array('controller'=>'producto','action'=>'index'))?>">Back</a>
+
+
+<?=$this->form()->openTag($this->form);?>
+<?=$this->formCollection($this->form);?>
+<?=$this->form()->closeTag();?>
+
+
+<style>
+    form label,form input,form textarea{display: block}
+</style>

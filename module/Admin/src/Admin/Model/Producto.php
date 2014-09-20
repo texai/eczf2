@@ -10,8 +10,10 @@ class Producto {
     protected $nombre;
     protected $precio_compra;
     protected $precio_venta;
-
-    public function getId() {
+    protected $activo;
+    
+    
+        public function getId() {
         return $this->id;
     }
 
@@ -59,6 +61,14 @@ class Producto {
         $this->precio_venta = $precio_venta;
     }
 
+    public function getActivo() {
+        return $this->activo;
+    }
+
+    public function setActivo($activo) {
+        $this->activo = $activo;
+    }
+    
     public function exchangeArray(array $data) {
         $this->id = (isset($data['id'])) ? $data['id'] : null;
         $this->categoria_id = (isset($data['categoria_id'])) ? $data['categoria_id'] : null;
@@ -66,7 +76,29 @@ class Producto {
         $this->nombre = (isset($data['nombre'])) ? $data['nombre'] : null;
         $this->precio_compra = (isset($data['precio_compra'])) ? $data['precio_compra'] : null;
         $this->precio_venta = (isset($data['precio_venta'])) ? $data['precio_venta'] : null;
+        $this->activo = (isset($data['activo'])) ? $data['activo'] : null;
     }
-
+    
+    public function toArray($partial = false) {
+        $arr = array(
+            'id'            => $this->getId(),
+            'categoria_id'        => $this->getCategoria_id(),
+            'proveedor_id'        => $this->getProveedor_id(),
+            'nombre'        => $this->getNombre(),
+            'precio_compra'        => $this->getPrecio_compra(),
+            'precio_venta'        => $this->getPrecio_venta(),
+            'activo'        => $this->getActivo()
+            
+        );
+        if($partial){
+            foreach ($arr as $key => $value) {
+                if(is_null($value)){
+                    unset($arr[$key]);
+                }
+            }
+        }
+        return $arr;
+        
+    }    
 
 }
