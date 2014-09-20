@@ -2,11 +2,12 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
-//        'Api',
+//        'Api', 
         'Admin',
-        'Application',
-//        'TemaDb',
-        'TemaPaginator',
+        'Application',        
+//        'TemaDb',        
+        'HelmutProducto',
+//        'TemaPaginator',
 //        'Cron',
     ),
 

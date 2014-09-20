@@ -29,7 +29,7 @@ class Module
             $sm = $controller->getServiceLocator();
             $controllerClass = get_class($controller);
             $module = substr($controllerClass, 0, strpos($controllerClass, '\\'));
-            if($module == 'Admin' || $module == 'Application'){
+            if($module == 'Admin' || $module == 'Application' || $module == 'HelmutProducto'){
                 $controller->layout('layout/'. $module); 
                 $templatePathResolver = $sm->get('Zend\View\Resolver\TemplatePathStack'); 
                 $templatePathResolver->setPaths(array(realpath(dirname(__DIR__).'/'.  $module.'/view')));
