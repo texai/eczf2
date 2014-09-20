@@ -5,13 +5,13 @@ namespace HelmutProducto\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+
 class ProductoController extends AbstractActionController
 {
     public function indexAction()
     {
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
-        /* @var $mProducto \Admin\Model\CategoriaTable */
         $mProducto = $sl->get('Admin\Model\ProductoTable');
         $view->rows = $mProducto->fetchAll();
         return $view;

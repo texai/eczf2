@@ -36,7 +36,20 @@
             <? endforeach; ?>
         </tbody>
     </table>
-    
+     <?php 
+        echo $this->paginationControl(
+        // el objeto paginador
+        $albums,
+        // estilo
+        'sliding',
+        // el partial del control paginador
+        array('helmut-producto/producto/_pag.phtml','HelmutProducto'),
+        // La ruta de los enlaces
+        array(
+        'route' => 'HelmutProducto/default'
+        )
+        ); 
+    ?>
 </div>
 
 <style>
