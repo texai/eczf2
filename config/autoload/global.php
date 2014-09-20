@@ -20,10 +20,7 @@ if (!is_readable(__DIR__ . '/env')) {
     );
 }
 
-$envFile = __DIR__ . '/env';
-$env = trim(file_get_contents($envFile));
-define('APPLICATION_ENV', $env);
-
+$env = APPLICATION_ENV;
 $envConfigFile = __DIR__ . '/' . $env . '.php';
 $envConfig = array();
 if (is_readable($envConfigFile)) {
@@ -32,7 +29,7 @@ if (is_readable($envConfigFile)) {
 
 
 $globalConfig =  array(
-    'home_max_sliders' => 5
+    'home_max_sliders' => 5,
 );
 
 
