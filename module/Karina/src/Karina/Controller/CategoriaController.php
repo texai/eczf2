@@ -36,7 +36,7 @@ class CategoriaController extends AbstractActionController
                 $categoria = new \Karina\Model\Categoria();
                 $categoria->exchangeArray($values);
                 $mCategoria->grabar($categoria);
-                $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
+                $this->redirect()->toRoute('karina/default', array('controller'=>'categoria','action'=>'index'));
             }
             
         }
