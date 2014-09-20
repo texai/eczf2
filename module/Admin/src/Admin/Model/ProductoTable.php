@@ -44,6 +44,14 @@ class ProductoTable {
         });
     }
    
+    public function grabar(\Admin\Model\Producto $producto){
+        $data = $producto->toArray();
+        $extra = array(
+            //'creado' => date('Y-m-d H:i:s'),
+            'activo' => 1,
+        );
+        $this->tableGateway->insert(array_merge($data,$extra));
+    }
      public function editar(\Admin\Model\Producto $producto, $id) {
         $this->tableGateway->update($producto->toArray(true), array('id=?'=>$id));
     }
