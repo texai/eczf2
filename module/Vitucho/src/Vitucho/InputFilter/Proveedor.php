@@ -18,7 +18,7 @@ class Proveedor extends InputFilter{
         $this->add($ruc);
         
         $nombre = new \Zend\InputFilter\Input('nombre');
-        $v2 = new \Zend\Validator\StringLength(array('min'=>25,'max'=>50, 'encoding'=>'UTF-8'));
+        $v2 = new \Zend\Validator\StringLength(array('min'=>10,'max'=>25, 'encoding'=>'UTF-8'));
         $nombre->getValidatorChain()->attach($v2);
         $this->add($nombre);
 
