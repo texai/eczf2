@@ -5,8 +5,9 @@ return array(
 //        'Api',
         'Admin',
         'Application',
-//        'TemaDb',
-        'TemaPaginator',
+        'TemaDb',
+        'Karina',
+//        'TemaPaginator',
 //        'Cron',
     ),
 
