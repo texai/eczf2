@@ -12,6 +12,11 @@ class ProveedorController extends AbstractActionController
     public function indexAction()
     {
         $view = new ViewModel();
+        
+        $view->qs = $this->params()->fromQuery();
+        $view->orden = $this->params()->fromQuery('orden','id');
+        $view->dir = $this->params()->fromRoute('dir','ASC');
+        
         $sl = $this->getServiceLocator();
         $config = $sl->get('config');
         $pageRange = $config['portal']['mant']['proveedor']['page_range'];
@@ -19,10 +24,11 @@ class ProveedorController extends AbstractActionController
         /* @var $mCategoria \Admin\Model\ProveedorTable */
         $mCategoria = $sl->get('Admin\Model\ProveedorTable');
         $page = $this->params()->fromQuery('page', '1');
-        $view->rows = $mCategoria->fetchAll(true);
+        $view->rows = $mCategoria->fetchAll(true,array('orden'=>$view->orden,'dir'=>$view->dir));
         $view->rows->setItemCountPerPage($cpp);
         $view->rows->setCurrentPageNumber($page);
         $view->rows->setPageRange($pageRange);
+        
         return $view;
     }
     

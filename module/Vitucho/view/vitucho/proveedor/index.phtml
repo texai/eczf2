@@ -8,7 +8,12 @@
         <thead>
             <tr>
                 <th>Proveedor</th>
-                <th>RUC</th>
+                <? $qsa = $this->qs; ?>
+                <? $qsa['orden'] = 'ruc'; ?>
+                <? $qsa['dir'] = 'ASC'; ?>
+                <? $u = $this->url('vitucho/default',array('controller'=>'proveedor','action'=>'index')).'?'.http_build_query($qsa) ?>
+                <? $l = 'v'; ?>
+                <th>RUC <a href="<?=$u?>"><?=$l?></a></th>
                 <th>Email</th>
                 <th>Acciones</th>
             </tr>

@@ -18,9 +18,9 @@ class ProveedorTable {
         $this->sl = $sl;
     }
     
-    public function fetchAll($paginated = false){
+    public function fetchAll($paginated = false, $filter = false){
         if ($paginated) {
-            $select = new Select('proveedor');
+            $select = $this->getSelectListar($filter);
             $resultSetPrototype = new ResultSet();
             $resultSetPrototype->setArrayObjectPrototype(new \Admin\Model\Proveedor());
             
@@ -32,6 +32,30 @@ class ProveedorTable {
         }
         $resultSet = $this->tableGateway->select();
         return $resultSet;
+    }
+    
+    public function getSelectListar($filter){
+        $select = new Select('proveedor');
+        $ordenValido = array('id','ruc','email');
+        $dirValido = array('ASC','DESC');
+        $orden = 'id';
+        $dir = 'ASC';
+        if($select===false){
+            return $select;
+        }
+        
+        if(array_key_exists('dir', $filter) 
+                && in_array($filter['dir'], $dirValido) ){
+            $dir = $filter['dir'];
+        }
+        if(array_key_exists('orden', $filter) 
+                && in_array($filter['orden'], $ordenValido) ){
+            $orden = $filter['orden'];
+        }
+        $select->order($orden.' '.$dir);
+        
+        
+        return $select;
     }
     
     public function getById($id) {
