@@ -27,9 +27,16 @@ if (is_readable($envConfigFile)) {
     $envConfig = include $envConfigFile;
 }
 
-
 $globalConfig =  array(
     'home_max_sliders' => 5,
+    'portal' => array(
+        'mant' => array(
+            'proveedor' => array(
+                'page_range' => 6,
+                'count_per_page' => 5,
+            ),
+        ),
+    ),
 );
 
 

@@ -13,9 +13,16 @@ class ProveedorController extends AbstractActionController
     {
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
-        /* @var $mCategoria \Admin\Model\CategoriaTable */
+        $config = $sl->get('config');
+        $pageRange = $config['portal']['mant']['proveedor']['page_range'];
+        $cpp = $config['portal']['mant']['proveedor']['count_per_page'];
+        /* @var $mCategoria \Admin\Model\ProveedorTable */
         $mCategoria = $sl->get('Admin\Model\ProveedorTable');
-        $view->rows = $mCategoria->fetchAll();
+        $page = $this->params()->fromQuery('page', '1');
+        $view->rows = $mCategoria->fetchAll(true);
+        $view->rows->setItemCountPerPage($cpp);
+        $view->rows->setCurrentPageNumber($page);
+        $view->rows->setPageRange($pageRange);
         return $view;
     }
     

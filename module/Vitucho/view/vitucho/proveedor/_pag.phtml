@@ -1,10 +1,26 @@
 <?php if ($this->pageCount): ?>
     <div class="pagination pagination-centered">
         <ul>
+            
+            <!-- First page link -->
+            <?php if (isset($this->first)): ?>
+                <li>
+                <a href="<?php echo $this->url($this->route,$this->routeArgs); ?>?page=<?php echo $this->first; ?>">
+                        <<<<
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="#">
+                        <<<<
+                    </a>
+                </li>
+            <?php endif; ?>
+            
             <!-- Previous page link -->
             <?php if (isset($this->previous)): ?>
                 <li>
-                    <a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->previous; ?>">
+                    <a href="<?php echo $this->url($this->route,$this->routeArgs); ?>?page=<?php echo $this->previous; ?>">
                         <<
                     </a>
                 </li>
@@ -15,11 +31,12 @@
                     </a>
                 </li>
             <?php endif; ?>
+                
             <!-- Numbered page links -->
             <?php foreach ($this->pagesInRange as $page): ?>
                 <?php if ($page != $this->current): ?>
                     <li>
-                        <a href="<?php echo $this->url($this->route);?>?page=<?php echo $page; ?>">
+                        <a href="<?php echo $this->url($this->route,$this->routeArgs);?>?page=<?php echo $page; ?>">
                             <?php echo $page; ?>
                         </a>
                     </li>
@@ -33,7 +50,7 @@
             <!-- Next page link -->
             <?php if (isset($this->next)): ?>
                 <li>
-                    <a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->next; ?>">
+                    <a href="<?php echo $this->url($this->route,$this->routeArgs); ?>?page=<?php echo $this->next; ?>">
                         >>
                     </a>
                 </li>
@@ -44,6 +61,24 @@
                     </a>
                 </li>
             <?php endif; ?>
+
+            <!-- Last page link -->
+            <?php if (isset($this->last)): ?>
+                <li>
+                    <a href="<?php echo $this->url($this->route,$this->routeArgs); ?>?page=<?php echo $this->last; ?>">
+                        >>>>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="#">
+                        >>>>
+                    </a>
+                </li>
+            <?php endif; ?>
+            
+                
+                
         </ul>
     </div>
 <?php endif; ?>

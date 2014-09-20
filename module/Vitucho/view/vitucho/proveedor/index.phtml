@@ -42,18 +42,19 @@
     </table>
     
      <?php 
-//    echo $this->paginationControl(
-//            // el objeto paginador
-//        $albums,
-//            // estilo
-//        'sliding',
-//            // el partial del control paginador
-//        array('vitucho/proveedor/_pag.phtml','Vitucho'),
-//            // La ruta de los enlaces
-//        array(
-//            'route' => 'Vitucho'
-//        )
-//    ); 
+    echo $this->paginationControl(
+            // el objeto paginador
+        $this->rows,
+            // estilo
+            'sliding',
+            // el partial del control paginador
+        array('vitucho/proveedor/_pag.phtml','Vitucho'),
+            // La ruta de los enlaces
+        array(
+            'route' => 'vitucho/default',
+            'routeArgs' => array('controller'=>'proveedor','action'=>'index'),
+        )
+    ); 
     ?>
     
 </div>
