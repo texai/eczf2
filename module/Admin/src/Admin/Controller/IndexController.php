@@ -53,7 +53,8 @@ class IndexController extends AbstractActionController
             $formLogin->setData($data);
             if($formLogin->isValid()){
                 
-                $auth = $sl->get('AuthService');
+//                $auth = $sl->get('AuthService');
+                
                 
             }else{
                 var_dump($formLogin->getMessages());

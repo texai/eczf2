@@ -7,7 +7,7 @@ return array(
         'Application',
         'TemaDb',
         'Karina',
-//        'TemaPaginator',
+        'TemaPaginator',
 //        'Cron',
     ),
 
