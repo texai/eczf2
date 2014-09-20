@@ -6,6 +6,7 @@ return array(
         'Admin',
         'Application',
         'TemaDb',
+        'Karina',
         'TemaPaginator',
         'Vitucho',
     ),
