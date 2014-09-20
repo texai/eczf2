@@ -68,7 +68,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'en_US',
+        'locale' => 'es_ES',
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',
@@ -106,10 +106,10 @@ return array(
             ),
         ),
     ),
-    'db' => array(
-        'username' => 'root',
-        'password' => '',
-        'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=eczf2_dev;host=127.0.0.1',
-    )
+//    'db' => array(
+//        'username' => 'root',
+//        'password' => '',
+//        'driver' => 'Pdo',
+//        'dsn' => 'mysql:dbname=eczf2_dev;host=127.0.0.1',
+//    )
 );
