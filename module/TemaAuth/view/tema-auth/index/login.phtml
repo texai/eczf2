@@ -1,0 +1,25 @@
+
+<div class="row">
+
+    <h1>Login</h1>
+    
+    <? if(isset($this->errorMsg)): ?>
+        <?=$this->errorMsg?>
+    <? endif; ?>
+    
+    <?=$this->form()->openTag($this->form);?>
+    <?=$this->formCollection($this->form);?>
+    <?=$this->form()->closeTag();?>
+    
+    
+    <ul>
+        <li><a href="<?=$this->url('tema-auth/default',array('controller'=>'index','action'=>'index'))?>">Index</a></li>
+    </ul>
+    
+    
+</div>
+
+
+<style>
+    form label,form input,form textarea{display: block}
+</style>

@@ -17,15 +17,6 @@ class ProveedorController extends AbstractActionController
         $mCategoria = $sl->get('Admin\Model\ProveedorTable');
         $view->rows = $mCategoria->fetchAll();
         return $view;
-        
-        
-//        $paginator = $this->getProveedorTable()->fetchAll(true);
-//        $paginator->setCurrentPageNumber((int) $this->params()->fromQuery('page', 1));
-//        $paginator->setItemCountPerPage(3);
-//
-//        return new ViewModel(array(
-//            'albums' => $paginator
-//        ));
     }
     
     public function getProveedorTable() {
