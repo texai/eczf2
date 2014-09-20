@@ -65,7 +65,7 @@ class Module
                     $adapter = $sl->get('dbadapter');
                     $rsPrototype = new ResultSet();
                     $rsPrototype->setArrayObjectPrototype(new Categoria());
-                    $tableGateway = new TableGateway('categoria', $adapter, null, $rsPrototype);
+                    $tableGateway = new TableGateway('kategoria', $adapter, null, $rsPrototype);
                     return $tableGateway;
                 },
                         
