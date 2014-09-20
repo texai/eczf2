@@ -1,0 +1,25 @@
+<?// var_dump($this->form) ?>
+
+<?//=$this->form()->openTag($this->form);?>
+<?//=$this->formCollection($this->form);?>
+<?//=$this->form()->closeTag();?>
+
+
+<?=$this->form()->openTag($this->form);?>
+    <?//=$this->formInput($this->form->get('token'))?>
+    <?//=$this->formRow($this->form->get('token'));?>
+
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <?=$this->formInput($this->form->get('login'))?>
+    
+    <? $e = $this->form->get('pwd') ?>
+    <? $e->setAttribute('class', 'form-control'); ?>
+    <?=$this->formInput($e)?>
+    <label class="checkbox">
+        <?=$this->formCheckbox($this->form->get('rememberme'))?> Remember me
+    </label>
+    <?=$this->formSubmit($this->form->get('enviar'))?>
+    
+
+<?=$this->form()->closeTag();?>
+

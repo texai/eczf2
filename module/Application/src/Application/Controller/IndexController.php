@@ -19,8 +19,7 @@ class IndexController extends AbstractActionController
     {
         $view = new ViewModel();
         
-        $view->portal = 'Nombre del portal';
-        
+        $view->portal = 'Nombre del portal';            
         return $view;
     }
     

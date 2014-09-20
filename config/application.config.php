@@ -5,10 +5,12 @@ return array(
 //        'Api', 
         'Admin',
         'Application',        
+        'TemaDb',
+        'Karina',
+        'TemaPaginator',
+        'Vitucho',
 //        'TemaDb',        
         'HelmutProducto',
-//        'TemaPaginator',
-//        'Cron',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
