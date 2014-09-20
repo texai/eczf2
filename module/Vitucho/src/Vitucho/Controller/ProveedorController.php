@@ -40,7 +40,7 @@ class ProveedorController extends AbstractActionController
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
         $form = new \Vitucho\Form\Proveedor();
-        $if = new \Admin\InputFilter\Categoria();
+        $if = new \Vitucho\InputFilter\Proveedor();
         $form->setInputFilter($if);
         $view->form = $form;
         $req = $this->getRequest();
@@ -68,7 +68,7 @@ class ProveedorController extends AbstractActionController
         /* @var $mProveedor \Admin\Model\ProveedorTable */
         $mProveedor = $sl->get('Admin\Model\ProveedorTable');
         $form = new \Vitucho\Form\Proveedor();
-        $if = new \Admin\InputFilter\Categoria();
+        $if = new \Vitucho\InputFilter\Proveedor();
         
         $id = $this->params()->fromRoute('id', -1);
         if($id == -1){
