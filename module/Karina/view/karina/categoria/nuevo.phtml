@@ -1,0 +1,14 @@
+<h3>Nueva Categoría</h3>
+
+
+<a class="btn btn-default" href="<?=$this->url('admin/default',array('controller'=>'categoria','action'=>'index'))?>">Back</a>
+
+
+<?=$this->form()->openTag($this->form);?>
+<?=$this->formCollection($this->form);?>
+<?=$this->form()->closeTag();?>
+
+
+<style>
+    form label,form input,form textarea{display: block}
+</style>

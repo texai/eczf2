@@ -6,8 +6,9 @@ return array(
         'Admin',
         'Application',
         'TemaDb',
+        'Karina',
         'TemaPaginator',
-//        'Cron',
+        'Vitucho',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
