@@ -9,8 +9,6 @@
 
 namespace HelmutProducto\Controller;
 
-use Admin\Model\Producto;
-
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 

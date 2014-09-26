@@ -4,6 +4,8 @@ namespace Admin\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\Sql\Select;
+use Zend\Paginator\Paginator;
+use Zend\Paginator\Adapter\DbSelect;
 
 class ProductoTable {
     
@@ -15,8 +17,22 @@ class ProductoTable {
         $this->sl = $sl;
     }
     
-    public function fetchAll(){
-        return $this->tableGateway->select();
+    public function fetchAll($paginated = false){
+        if ($paginated) {
+            $select = new Select('producto');
+            $resultSetPrototype = new ResultSet();
+            $resultSetPrototype->setArrayObjectPrototype(new Producto());
+            
+            $paginatorAdapter = new DbSelect(
+                    $select, $this->tableGateway->getAdapter(), $resultSetPrototype
+            );
+            $paginator = new Paginator($paginatorAdapter);           
+            return $paginator;
+        }
+        
+        $paginated = $this->tableGateway->select();
+        return $paginated;
+        
     }
     
     public function getById($id) {
@@ -49,6 +65,8 @@ class ProductoTable {
         $extra = array(
             'categoria_id' => 1,
             'proveedor_id' => 1,
+            'precio_compra' => 400,
+            'precio_venta' => 750,
             'activo' => 1,
         );
         $this->tableGateway->insert(array_merge($data,$extra));
