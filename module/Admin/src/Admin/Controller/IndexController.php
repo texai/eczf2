@@ -20,7 +20,34 @@ class IndexController extends AbstractActionController
         
         $view->portal = 'ADMIN!';
         
+        $sl = $this->getServiceLocator();
+        $auth = $sl->get('AuthService');
+
+        // asignacion en cadena
+//        $estoyLogueado = $view->isAuth = $auth->hasIdentity();
+        
+        $estoyLogueado = $auth->hasIdentity();
+        $view->isAuth = $auth->hasIdentity();
+        
+        var_dump('estoyLogueado');
+        var_dump($estoyLogueado);
+        
+        if($estoyLogueado){
+            var_dump('$auth->getStorage()->read()');
+            var_dump($auth->getStorage()->read());
+        }
+        
+        
         return $view;
+    }
+    
+    public function logoutAction()
+    {
+        $sl = $this->getServiceLocator();
+        $auth = $sl->get('AuthService');
+        $auth->clearIdentity();
+        $this->redirect()->toUrl('/admin');
+        
     }
     
     public function loginAction()
@@ -53,11 +80,31 @@ class IndexController extends AbstractActionController
             $formLogin->setData($data);
             if($formLogin->isValid()){
                 
-//                $auth = $sl->get('AuthService');
+                $values = $formLogin->getData();
+                
+                /* @var $auth \Zend\Authentication\AuthenticationService */
+                $auth = $sl->get('AuthService');
+                
+                /* @var $adapter \Zend\Authentication\Adapter\DbTable */
+                $adapter = $auth->getAdapter();
+                
+                $adapter->setIdentity($values['login']);
+                $adapter->setCredential($values['pwd']);
+                
+                /* @var $result \Zend\Authentication\Result */
+                $result = $auth->authenticate($adapter);
+                
+                if($result->isValid()){
+                    $userRow = $adapter->getResultRowObject();
+                    $auth->getStorage()->write($userRow);
+                    $this->redirect()->toUrl('/admin');
+                }else{
+                    var_dump('Usuario o pwd oincorrecto');
+                }
                 
                 
-            }else{
-                var_dump($formLogin->getMessages());
+                
+                
             }
             
         }

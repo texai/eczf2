@@ -1,0 +1,969 @@
+2014-09-25T21:32:38-05:00 WARN (4): evento!
+2014-09-25T21:33:22-05:00 WARN (4): Vitucho\Controller\IndexController
+2014-09-25T21:33:29-05:00 WARN (4): Vitucho\Controller\ProveedorController
+2014-09-25T21:35:24-05:00 WARN (4):
+2014-09-25T21:36:28-05:00 WARN (4): index
+2014-09-25T21:37:09-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:39:05-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:39:16-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => Index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:23-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:24-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:34-05:00 WARN (4): Array
+(
+    [controller] => Application\Controller\Index
+    [action] => index
+)
+
+2014-09-25T21:39:36-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => Index
+)
+
+2014-09-25T21:39:37-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:39:45-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:46-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:47-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:49-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:50-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:51-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:51-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:57-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:39:58-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:29-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:30-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:40:31-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => Admin\Controller\Index:login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:42:48-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:42:54-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:42:54-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => Index
+)
+
+2014-09-25T21:42:56-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:43:00-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:43:02-05:00 WARN (4): Array
+(
+    [controller] => Application\Controller\Index
+    [action] => index
+)
+
+2014-09-25T21:43:03-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => Index
+)
+
+2014-09-25T21:43:07-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:43:09-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:43:12-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => logout
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:43:13-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:43:15-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+
+2014-09-25T21:43:15-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:43:18-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => login
+    [__CONTROLLER__] => index
+)
+
+2014-09-25T21:43:18-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Admin\Controller
+    [controller] => Admin\Controller\Index
+    [action] => index
+    [__CONTROLLER__] => Index
+)
+
+2014-09-25T21:43:20-05:00 WARN (4): Array
+(
+    [__NAMESPACE__] => Vitucho\Controller
+    [controller] => Vitucho\Controller\Proveedor
+    [action] => index
+    [__CONTROLLER__] => proveedor
+)
+

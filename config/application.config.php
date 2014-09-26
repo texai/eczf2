@@ -3,7 +3,6 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
 //        'Api', 
-        'Admin',
         'Application',        
         'TemaDb',
         'Karina',
@@ -11,6 +10,7 @@ return array(
         'Vitucho',
 //        'TemaDb',        
         'HelmutProducto',
+        'Admin',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

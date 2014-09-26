@@ -29,6 +29,36 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        
+        $eventManager->getSharedManager()->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e){
+            $file = __DIR__.'/em.log';
+            $logw = new \Zend\Log\Writer\Stream($file);
+            $log = new \Zend\Log\Logger;
+            $log->addWriter($logw);
+            
+            $controller = $e->getTarget();
+            $paramsFromRoute = $controller->params()->fromRoute();
+//            $action = $paramsFromRoute['action'];
+            
+            $sm = $controller->getServiceLocator();
+            $auth = $sm->get('AuthService');
+            if(!$auth->hasIdentity()){
+                if(
+                        $paramsFromRoute['controller'].'::'.$paramsFromRoute['action'] !=
+                        'Admin\Controller\Index::login'
+                   ){
+                    $controller->redirect()->toUrl('/admin/index/login');
+                    
+                }
+                
+            }
+            
+            
+            $log->log(4, print_r($paramsFromRoute,true));
+            
+            
+        });
+        
     }
 
     public function getConfig()
@@ -51,9 +81,16 @@ class Module
     public function getServiceConfig() {
         return array(
             'factories' => array(
-                'AuthService' => function(){
-                    $authAdapter = new \Zend\Authentication\Adapter\DbTable($zendDb);
+                'AuthService' => function($sl){
+                    $dbadapter = $sl->get('dbadapter');
+                    $authAdapter = new \Zend\Authentication\Adapter\DbTable($dbadapter);
+                    $authAdapter->setTableName('usuario');
+                    $authAdapter->setIdentityColumn('login');
+                    $authAdapter->setCredentialColumn('pwd');
+                    $authAdapter->setCredentialTreatment('MD5(?)');
                     $auth = new \Zend\Authentication\AuthenticationService();
+                    $auth->setAdapter($authAdapter);
+                    return $auth;
                 },
 
                 'Admin\Model\CategoriaTable' => function($sl){

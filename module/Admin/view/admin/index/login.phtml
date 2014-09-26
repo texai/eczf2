@@ -9,11 +9,29 @@
     <?=$this->formInput($this->form->get('token'))?>
 
     <h2 class="form-signin-heading">Please sign in</h2>
-    <?=$this->formInput($this->form->get('login'))?>
+    <?
+    // el objeto elemento (\Zend\Form\Element\Text)
+    $e = $this->form->get('login');
+    // tiene errores o no?
+    $hasError = (bool) count($e->getMessages());
+    // el primer error
+    $error = $hasError ? array_values($e->getMessages())[0] : '';
+    ?>
+    <?=$this->formInput($e)?>
+    <?=$error?>
     
-    <? $e = $this->form->get('pwd') ?>
+    <?
+    // el objeto elemento (\Zend\Form\Element\Password)
+    $e = $this->form->get('pwd');
+    // tiene errores o no?
+    $hasError = (bool) count($e->getMessages());
+    // el primer error
+    $error = $hasError ? array_values($e->getMessages())[0] : '';
+    ?>
     <? $e->setAttribute('class', 'form-control'); ?>
     <?=$this->formInput($e)?>
+    <?=$error?>
+    
     <label class="checkbox">
         <?=$this->formCheckbox($this->form->get('rememberme'))?> Remember me
     </label>

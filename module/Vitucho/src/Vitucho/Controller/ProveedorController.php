@@ -15,7 +15,7 @@ class ProveedorController extends AbstractActionController
         
         $view->qs = $this->params()->fromQuery();
         $view->orden = $this->params()->fromQuery('orden','id');
-        $view->dir = $this->params()->fromRoute('dir','ASC');
+        $view->dir = $this->params()->fromQuery('dir','ASC');
         
         $sl = $this->getServiceLocator();
         $config = $sl->get('config');

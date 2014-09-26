@@ -4,16 +4,58 @@
 
 <div class="row">
     <h1>Admin - Proveedor</h1>
+<style>
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/fonts/glyphicons-halflings-regular.eot');
+  src: url('/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}        
+</style>    
+    
+<?php
+$qsa = $this->qs;
+$urlBase = $this->url('vitucho/default',array('controller'=>'proveedor','action'=>'index'));
+$mask = '<a class="btn btn-primary" href="%s">%s <span class="glyphicon glyphicon-chevron-%s"></span></a>';
+
+$dir = 'ASC';
+$orden = 'ruc';
+$qsa['dir'] = $dir;
+$qsa['orden'] = $orden;
+$u = $urlBase.'?'.http_build_query($qsa);
+echo sprintf($mask,$u,$orden,$dir=='ASC'?'down':'up');
+
+$dir = 'DESC';
+$orden = 'ruc';
+$qsa['dir'] = $dir;
+$qsa['orden'] = $orden;
+$u = $urlBase.'?'.http_build_query($qsa);
+echo sprintf($mask,$u,$orden,$dir=='ASC'?'down':'up');
+
+$dir = 'ASC';
+$orden = 'email';
+$qsa['dir'] = $dir;
+$qsa['orden'] = $orden;
+$u = $urlBase.'?'.http_build_query($qsa);
+echo sprintf($mask,$u,$orden,$dir=='ASC'?'down':'up');
+
+$dir = 'DESC';
+$orden = 'email';
+$qsa['dir'] = $dir;
+$qsa['orden'] = $orden;
+$u = $urlBase.'?'.http_build_query($qsa);
+echo sprintf($mask,$u,$orden,$dir=='ASC'?'down':'up');
+
+?>
+    
+    
     <table class="table">
         <thead>
             <tr>
                 <th>Proveedor</th>
-                <? $qsa = $this->qs; ?>
-                <? $qsa['orden'] = 'ruc'; ?>
-                <? $qsa['dir'] = 'ASC'; ?>
-                <? $u = $this->url('vitucho/default',array('controller'=>'proveedor','action'=>'index')).'?'.http_build_query($qsa) ?>
-                <? $l = 'v'; ?>
-                <th>RUC <a href="<?=$u?>"><?=$l?></a></th>
+                <th>RUC</th>
                 <th>Email</th>
                 <th>Acciones</th>
             </tr>
