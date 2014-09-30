@@ -7,6 +7,12 @@ use Zend\View\Model\ViewModel;
 
 class CategoriaController extends AbstractActionController
 {
+    
+    // En ZF1
+//    public function preDispatch(){
+//        
+//    }
+    
     public function indexAction()
     {
         $view = new ViewModel();
@@ -36,6 +42,7 @@ class CategoriaController extends AbstractActionController
                 $categoria = new \Admin\Model\Categoria();
                 $categoria->exchangeArray($values);
                 $mCategoria->grabar($categoria);
+                $this->getEventManager()->trigger('nuevo', $this, $categoria);
                 $this->redirect()->toRoute('admin/default', array('controller'=>'categoria','action'=>'index'));
             }
             

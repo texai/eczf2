@@ -20,13 +20,16 @@ class CategoriaTable {
         return $this->tableGateway->select(array('id=?'=>$id))->current();
     }
     
-    public function grabar(\Admin\Model\Categoria $categoria){
-        $data = $categoria->toArray();
-        $extra = array(
-            'creado' => date('Y-m-d H:i:s'),
-            'activo' => 1,
-        );
-        $this->tableGateway->insert(array_merge($data,$extra));
+    public function grabar(\Admin\Model\Categoria &$categoria){
+//        $data = $categoria->toArray();
+//        $extra = array(
+//            'creado' => date('Y-m-d H:i:s'),
+//            'activo' => 1,
+//        );
+//        $this->tableGateway->insert(array_merge($data,$extra));
+        $categoria->setCreado(date('Y-m-d H:i:s'));
+        $categoria->setActivo(1);
+        $this->tableGateway->insert($categoria->toArray());
     }
     
     public function editar(\Admin\Model\Categoria $categoria, $id) {
