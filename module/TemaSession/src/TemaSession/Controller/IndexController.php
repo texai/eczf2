@@ -20,12 +20,27 @@ class IndexController extends AbstractActionController {
         $view = new ViewModel();
         $sess = new \Zend\Session\Container('tienda');
         $view->carrito = $sess->carrito;
-        var_dump($_SESSION);
+//        $view->carrito = null;
+//        var_dump($_COOKIE);
+//        var_dump($this->getRequest()->getHeaders()->get('Cookie'));
+//        var_dump($_SESSION);
+//        
+        // SIN usar ZF2
+        // escribir variable de sesión
+//        $_SESSION['kkm']['uid'] = 23;
+        // leer variable de sesión
+//        $uid = $_SESSION['uid']['jh'][0];
+        //borrar
+//        unset($_SESSION['uid']['jh']);
+        
+        
+        
         return $view;
     }
 
     public function addItemAction() {
         $sess = new \Zend\Session\Container('tienda');
+        
         if ($sess->carrito == null) {
             $sess->carrito = array();
         }

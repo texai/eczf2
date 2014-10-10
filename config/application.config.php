@@ -5,6 +5,7 @@ return array(
 //        'Api', 
         'Application',        
         'TemaDb',
+        'TemaSession',
         'Karina',
         'TemaPaginator',
         'Vitucho',
