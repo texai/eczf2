@@ -63,6 +63,21 @@ class Module
                     $authAdapter->setCredentialColumn('pwd');
                     $authAdapter->setCredentialTreatment('MD5(?)');
                     $auth = new \Zend\Authentication\AuthenticationService();
+                    $storage = new \Zend\Authentication\Storage\Session('admin');
+                    $auth->setStorage($storage);
+                    $auth->setAdapter($authAdapter);
+                    return $auth;
+                },
+                'AuthServicePortal' => function($sl){
+                    $dbadapter = $sl->get('dbadapter');
+                    $authAdapter = new \Zend\Authentication\Adapter\DbTable($dbadapter);
+                    $authAdapter->setTableName('postulante');
+                    $authAdapter->setIdentityColumn('login');
+                    $authAdapter->setCredentialColumn('pwd');
+                    $authAdapter->setCredentialTreatment('MD5(?)');
+                    $auth = new \Zend\Authentication\AuthenticationService();
+                    $storage = new \Zend\Authentication\Storage\Session('portal');
+                    $auth->setStorage($storage);
                     $auth->setAdapter($authAdapter);
                     return $auth;
                 },
