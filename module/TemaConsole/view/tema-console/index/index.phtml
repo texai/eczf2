@@ -1,0 +1,18 @@
+
+<div class="row">
+
+    <h1>Tema Session</h1>
+    
+    <ul>
+        <li><a href="<?=$this->url('tema-console/default',array('controller'=>'index','action'=>'add-item'))?>">Agregar item al carrito</a></li>
+        <li><a href="<?=$this->url('tema-console/default',array('controller'=>'index','action'=>'empty-cart'))?>">Elimiar Carrito</a></li>
+        <li><a href="<?=$this->url('tema-console/default',array('controller'=>'index','action'=>'empty-cart-secs'))?>">Elimiar Carrito (5 secs)</a></li>
+        <li><a href="<?=$this->url('tema-console/default',array('controller'=>'index','action'=>'empty-cart-hops'))?>">Elimiar Carrito (5 hops)</a></li>
+    </ul>
+    
+    
+    <h4>Carrito</h4>
+    <? var_dump($this->carrito) ?>
+    
+    
+</div>

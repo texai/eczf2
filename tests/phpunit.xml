@@ -1,0 +1,68 @@
+<phpunit
+    bootstrap="./Bootstrap.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    forceCoversAnnotation="false"
+    processIsolation="false"
+    strict="true"
+    verbose="false"
+>
+    <testsuites>
+        <!--testsuite name="Portal Test Suite">
+            <directory>./PortalTest</directory>
+            <exclude>./PortalTest/TestAsset</exclude>
+        </testsuite-->
+        <testsuite name="Admin Test Suite">
+            <directory>./AdminTest</directory>
+            <exclude>./AdminTest/TestAsset</exclude>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+        </exclude>
+    </groups>
+
+    <listeners>
+    </listeners>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../module/Admin/</directory>
+            <exclude>
+                <directory suffix=".phtml">../module/</directory>
+            </exclude>
+        </whitelist>        
+        <blacklist>
+            <directory suffix=".php">./PortalTest</directory>
+            <directory suffix=".php">./AdminTest</directory>
+            <directory>../config</directory>
+            <directory>../data</directory>
+            <directory>../public</directory>
+            <directory>../templates</directory>
+            <directory>../tests</directory>
+            <directory>../var</directory>
+            <directory>../vendor</directory>
+        </blacklist>
+    </filter>
+    
+    <logging>
+        <log type="coverage-html" target="../var/log/coverage/html" charset="UTF-8" highlight="true" lowUpperBound="35" highLowerBound="70"/>
+        <log type="testdox-html" target="../var/log/coverage/dox/testdox.html"/>
+    </logging>    
+
+    <php>
+
+        <ini name="date.timezone" value="UTC"/>
+
+        <!-- Integration Test Variables -->
+        <!--<var name="ZEND_DB_ADAPTER_DRIVER_MYSQL_HOSTNAME" value="" />-->
+        <!--<var name="ZEND_DB_ADAPTER_DRIVER_MYSQL_USERNAME" value="" />-->
+        <!--<var name="ZEND_DB_ADAPTER_DRIVER_MYSQL_PASSWORD" value="" />-->
+        <!--<var name="ZEND_DB_ADAPTER_DRIVER_MYSQL_DATABASE" value="" />-->
+
+    </php>
+
+</phpunit>

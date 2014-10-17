@@ -51,6 +51,15 @@ class CategoriaController extends AbstractActionController
     }
     
     public function editarAction() {
+        
+//        $acl = $sl->get('acl');
+////        
+//        if(!$acl->puede('editar','categoria')){
+//            // redirect al home
+//            // forward al página "no tienes permisos"
+//        }
+        
+        
         $view = new ViewModel();
         $sl = $this->getServiceLocator();
         /* @var $mCategoria \Admin\Model\CategoriaTable */

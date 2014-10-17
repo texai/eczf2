@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/texai/www/ec/eczf2/module/Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/Users/texai/www/ec/eczf2/module/Admin</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#10">ProductoTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#6">Proveedor</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#11">ProveedorTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Service/ProductoService.php.html#8">ProductoService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#5">Producto</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#7">CategoriaTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#8">CategoriaController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#5">Categoria</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Module.php.html#25">Module</a></td><td class="text-right">47%</td></tr>
+       <tr><td><a href="src/Admin/EventManager/Listeners.php.html#9">Listeners</a></td><td class="text-right">61%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#5">Producto</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#6">Proveedor</a></td><td class="text-right">552</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#5">Categoria</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#11">ProveedorTable</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#8">CategoriaController</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#10">ProductoTable</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="src/Admin/EventManager/Listeners.php.html#9">Listeners</a></td><td class="text-right">11</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#78"><abbr title="ProductoTable::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#74"><abbr title="ProductoTable::editar">editar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#63"><abbr title="ProductoTable::grabar">grabar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#82"><abbr title="ProductoTable::borrar">borrar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#15"><abbr title="Proveedor::getId">getId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#27"><abbr title="Proveedor::getEmail">getEmail</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#23"><abbr title="Proveedor::getRuc">getRuc</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#19"><abbr title="Proveedor::getNombre">getNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#43"><abbr title="ProductoTable::anonymous function">anonymous function</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#38"><abbr title="ProductoTable::getById">getById</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#64"><abbr title="Producto::getActivo">getActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#60"><abbr title="Producto::setPrecio_venta">setPrecio_venta</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#56"><abbr title="Producto::setPrecio_compra">setPrecio_compra</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#68"><abbr title="Producto::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#72"><abbr title="Producto::exchangeArray">exchangeArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#20"><abbr title="ProductoTable::fetchAll">fetchAll</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#15"><abbr title="ProductoTable::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#82"><abbr title="Producto::toArray">toArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#31"><abbr title="Proveedor::getCreado">getCreado</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#35"><abbr title="Proveedor::getActivo">getActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#61"><abbr title="ProveedorTable::getById">getById</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#37"><abbr title="ProveedorTable::getSelectListar">getSelectListar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#21"><abbr title="ProveedorTable::fetchAll">fetchAll</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#65"><abbr title="ProveedorTable::grabar">grabar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#74"><abbr title="ProveedorTable::editar">editar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Service/ProductoService.php.html#13"><abbr title="ProductoService::onNuevaSubasta">onNuevaSubasta</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#82"><abbr title="ProveedorTable::borrar">borrar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#78"><abbr title="ProveedorTable::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#16"><abbr title="ProveedorTable::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#73"><abbr title="Proveedor::toArray">toArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#47"><abbr title="Proveedor::setRuc">setRuc</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#43"><abbr title="Proveedor::setNombre">setNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#39"><abbr title="Proveedor::setId">setId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#51"><abbr title="Proveedor::setEmail">setEmail</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#55"><abbr title="Proveedor::setCreado">setCreado</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#63"><abbr title="Proveedor::exchangeArray">exchangeArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#59"><abbr title="Proveedor::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#52"><abbr title="Producto::setNombre">setNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#48"><abbr title="Producto::setProveedor_id">setProveedor_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#21"><abbr title="Categoria::getCreado">getCreado</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#17"><abbr title="Categoria::getNombre">getNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#13"><abbr title="Categoria::getId">getId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#25"><abbr title="Categoria::getActivo">getActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#29"><abbr title="Categoria::setId">setId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#37"><abbr title="Categoria::setCreado">setCreado</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#33"><abbr title="Categoria::setNombre">setNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/EventManager/Listeners.php.html#44"><abbr title="Listeners::detachShared">detachShared</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/IndexController.php.html#125"><abbr title="IndexController::configAction">configAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#53"><abbr title="CategoriaController::editarAction">editarAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#26"><abbr title="CategoriaController::nuevoAction">nuevoAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#16"><abbr title="CategoriaController::indexAction">indexAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#96"><abbr title="CategoriaController::activarAction">activarAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#108"><abbr title="CategoriaController::desactivarAction">desactivarAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/IndexController.php.html#44"><abbr title="IndexController::logoutAction">logoutAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#120"><abbr title="CategoriaController::borrarAction">borrarAction</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#41"><abbr title="Categoria::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#46"><abbr title="Categoria::exchangeArray">exchangeArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#28"><abbr title="Producto::getNombre">getNombre</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#24"><abbr title="Producto::getProveedor_id">getProveedor_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#20"><abbr title="Producto::getCategoria_id">getCategoria_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#32"><abbr title="Producto::getPrecio_compra">getPrecio_compra</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#36"><abbr title="Producto::getPrecio_venta">getPrecio_venta</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#44"><abbr title="Producto::setCategoria_id">setCategoria_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#40"><abbr title="Producto::setId">setId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#16"><abbr title="Producto::getId">getId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#43"><abbr title="CategoriaTable::borrar">borrar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#11"><abbr title="CategoriaTable::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#72"><abbr title="Categoria::isImportacion">isImportacion</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#54"><abbr title="Categoria::toArray">toArray</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#15"><abbr title="CategoriaTable::fetchAll">fetchAll</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#19"><abbr title="CategoriaTable::getById">getById</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#39"><abbr title="CategoriaTable::setActivo">setActivo</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#35"><abbr title="CategoriaTable::editar">editar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/Model/CategoriaTable.php.html#23"><abbr title="CategoriaTable::grabar">grabar</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Admin/EventManager/Listeners.php.html#15"><abbr title="Listeners::anonymous function">anonymous function</a></a></td><td class="text-right">12%</td></tr>
+       <tr><td><a href="Module.php.html#116"><abbr title="Module::anonymous function">anonymous function</a></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="Module.php.html#55"><abbr title="Module::getServiceConfig">getServiceConfig</a></a></td><td class="text-right">37%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#72"><abbr title="Producto::exchangeArray">exchangeArray</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#63"><abbr title="Proveedor::exchangeArray">exchangeArray</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#37"><abbr title="ProveedorTable::getSelectListar">getSelectListar</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#46"><abbr title="Categoria::exchangeArray">exchangeArray</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="src/Admin/Model/Proveedor.php.html#73"><abbr title="Proveedor::toArray">toArray</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Admin/Model/Producto.php.html#82"><abbr title="Producto::toArray">toArray</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Admin/Model/Categoria.php.html#54"><abbr title="Categoria::toArray">toArray</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#53"><abbr title="CategoriaController::editarAction">editarAction</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#26"><abbr title="CategoriaController::nuevoAction">nuevoAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Admin/EventManager/Listeners.php.html#44"><abbr title="Listeners::detachShared">detachShared</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Admin/Model/ProveedorTable.php.html#21"><abbr title="ProveedorTable::fetchAll">fetchAll</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#96"><abbr title="CategoriaController::activarAction">activarAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Admin/Model/ProductoTable.php.html#20"><abbr title="ProductoTable::fetchAll">fetchAll</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#120"><abbr title="CategoriaController::borrarAction">borrarAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Admin/Controller/CategoriaController.php.html#108"><abbr title="CategoriaController::desactivarAction">desactivarAction</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.0.11</a> using <a href="http://php.net/" target="_top">PHP 5.4.24</a> and <a href="http://phpunit.de/">PHPUnit 4.3.1</a> at Fri Oct 17 2:49:17 UTC 2014.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([8,0,0,0,0,1,0,1,0,1,0,6], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([74,0,2,0,1,0,0,0,0,0,1,12], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.scatter.onlyCircles(false);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[47.761194029851,5,"<a href=\"Module.php.html#25\">Module<\/a>"],[0,14,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#8\">CategoriaController<\/a>"],[81.666666666667,9,"<a href=\"src\/Admin\/Controller\/IndexController.php.html#15\">IndexController<\/a>"],[61.764705882353,8,"<a href=\"src\/Admin\/EventManager\/Listeners.php.html#9\">Listeners<\/a>"],[100,1,"<a href=\"src\/Admin\/Filter\/Word\/SeparatorToDashSpanish.php.html#6\">SeparatorToDashSpanish<\/a>"],[0,18,"<a href=\"src\/Admin\/Model\/Categoria.php.html#5\">Categoria<\/a>"],[100,1,"<a href=\"src\/Admin\/InputFilter\/Login.php.html#7\">Login<\/a>"],[100,0,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#5\">Cliente<\/a>"],[100,0,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#6\">Aviso<\/a>"],[100,0,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#7\">AvisoUrbania<\/a>"],[100,3,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#9\">Adecsys<\/a>"],[0,7,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#7\">CategoriaTable<\/a>"],[0,26,"<a href=\"src\/Admin\/Model\/Producto.php.html#5\">Producto<\/a>"],[0,10,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#10\">ProductoTable<\/a>"],[0,23,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#6\">Proveedor<\/a>"],[0,14,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#11\">ProveedorTable<\/a>"],[0,1,"<a href=\"src\/Admin\/Service\/ProductoService.php.html#8\">ProductoService<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.scatter.onlyCircles(false);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Module.php.html#27\">Module::onBootstrap<\/a>"],[100,1,"<a href=\"Module.php.html#38\">Module::getConfig<\/a>"],[100,1,"<a href=\"Module.php.html#43\">Module::getAutoloaderConfig<\/a>"],[37.5,1,"<a href=\"Module.php.html#55\">Module::getServiceConfig<\/a>"],[16.666666666667,1,"<a href=\"Module.php.html#116\">Module::anonymous function<\/a>"],[0,1,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#16\">CategoriaController::indexAction<\/a>"],[0,3,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#26\">CategoriaController::nuevoAction<\/a>"],[0,4,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#53\">CategoriaController::editarAction<\/a>"],[0,2,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#96\">CategoriaController::activarAction<\/a>"],[0,2,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#108\">CategoriaController::desactivarAction<\/a>"],[0,2,"<a href=\"src\/Admin\/Controller\/CategoriaController.php.html#120\">CategoriaController::borrarAction<\/a>"],[100,2,"<a href=\"src\/Admin\/Controller\/IndexController.php.html#17\">IndexController::indexAction<\/a>"],[0,1,"<a href=\"src\/Admin\/Controller\/IndexController.php.html#44\">IndexController::logoutAction<\/a>"],[97.560975609756,5,"<a href=\"src\/Admin\/Controller\/IndexController.php.html#53\">IndexController::loginAction<\/a>"],[0,1,"<a href=\"src\/Admin\/Controller\/IndexController.php.html#125\">IndexController::configAction<\/a>"],[100,1,"<a href=\"src\/Admin\/EventManager\/Listeners.php.html#13\">Listeners::attachShared<\/a>"],[12.5,1,"<a href=\"src\/Admin\/EventManager\/Listeners.php.html#15\">Listeners::anonymous function<\/a>"],[0,3,"<a href=\"src\/Admin\/EventManager\/Listeners.php.html#44\">Listeners::detachShared<\/a>"],[100,3,"<a href=\"src\/Admin\/EventManager\/Listeners.php.html#53\">Listeners::controlarAccesoAutenticado<\/a>"],[100,1,"<a href=\"src\/Admin\/Filter\/Word\/SeparatorToDashSpanish.php.html#8\">SeparatorToDashSpanish::filter<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#13\">Categoria::getId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#17\">Categoria::getNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#21\">Categoria::getCreado<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#25\">Categoria::getActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#29\">Categoria::setId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#33\">Categoria::setNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#37\">Categoria::setCreado<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#41\">Categoria::setActivo<\/a>"],[0,5,"<a href=\"src\/Admin\/Model\/Categoria.php.html#46\">Categoria::exchangeArray<\/a>"],[0,4,"<a href=\"src\/Admin\/Model\/Categoria.php.html#54\">Categoria::toArray<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Categoria.php.html#72\">Categoria::isImportacion<\/a>"],[100,1,"<a href=\"src\/Admin\/InputFilter\/Login.php.html#9\">Login::__construct<\/a>"],[100,1,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#11\">Adecsys::obtenerCantidadAvisos<\/a>"],[100,1,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#15\">Adecsys::obtenerUltimoAviso<\/a>"],[100,1,"<a href=\"src\/Admin\/Model\/Adecsys.php.html#21\">Adecsys::calcularDiaPublicacion<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#11\">CategoriaTable::__construct<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#15\">CategoriaTable::fetchAll<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#19\">CategoriaTable::getById<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#23\">CategoriaTable::grabar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#35\">CategoriaTable::editar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#39\">CategoriaTable::setActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/CategoriaTable.php.html#43\">CategoriaTable::borrar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#16\">Producto::getId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#20\">Producto::getCategoria_id<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#24\">Producto::getProveedor_id<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#28\">Producto::getNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#32\">Producto::getPrecio_compra<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#36\">Producto::getPrecio_venta<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#40\">Producto::setId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#44\">Producto::setCategoria_id<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#48\">Producto::setProveedor_id<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#52\">Producto::setNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#56\">Producto::setPrecio_compra<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#60\">Producto::setPrecio_venta<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#64\">Producto::getActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Producto.php.html#68\">Producto::setActivo<\/a>"],[0,8,"<a href=\"src\/Admin\/Model\/Producto.php.html#72\">Producto::exchangeArray<\/a>"],[0,4,"<a href=\"src\/Admin\/Model\/Producto.php.html#82\">Producto::toArray<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#15\">ProductoTable::__construct<\/a>"],[0,2,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#20\">ProductoTable::fetchAll<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#38\">ProductoTable::getById<\/a>"],[100,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#42\">ProductoTable::listarProductosCompleto<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#43\">ProductoTable::anonymous function<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#63\">ProductoTable::grabar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#74\">ProductoTable::editar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#78\">ProductoTable::setActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProductoTable.php.html#82\">ProductoTable::borrar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#15\">Proveedor::getId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#19\">Proveedor::getNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#23\">Proveedor::getRuc<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#27\">Proveedor::getEmail<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#31\">Proveedor::getCreado<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#35\">Proveedor::getActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#39\">Proveedor::setId<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#43\">Proveedor::setNombre<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#47\">Proveedor::setRuc<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#51\">Proveedor::setEmail<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#55\">Proveedor::setCreado<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#59\">Proveedor::setActivo<\/a>"],[0,7,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#63\">Proveedor::exchangeArray<\/a>"],[0,4,"<a href=\"src\/Admin\/Model\/Proveedor.php.html#73\">Proveedor::toArray<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#16\">ProveedorTable::__construct<\/a>"],[0,2,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#21\">ProveedorTable::fetchAll<\/a>"],[0,6,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#37\">ProveedorTable::getSelectListar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#61\">ProveedorTable::getById<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#65\">ProveedorTable::grabar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#74\">ProveedorTable::editar<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#78\">ProveedorTable::setActivo<\/a>"],[0,1,"<a href=\"src\/Admin\/Model\/ProveedorTable.php.html#82\">ProveedorTable::borrar<\/a>"],[0,1,"<a href=\"src\/Admin\/Service\/ProductoService.php.html#13\">ProductoService::onNuevaSubasta<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

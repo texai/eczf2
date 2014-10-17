@@ -6,9 +6,11 @@
 
 
 <?=$this->form()->openTag($this->form);?>
-    <?=$this->formInput($this->form->get('token'))?>
+    <? if(APPLICATION_ENV!='testing'): ?>
+        <?=$this->formInput($this->form->get('token'))?>
+    <? endif; ?>
 
-    <h2 class="form-signin-heading">Please sign in</h2>
+<h2 class="form-signin-heading" id="titulo-login">Please sign in</h2>
     <?
     // el objeto elemento (\Zend\Form\Element\Text)
     $e = $this->form->get('login');

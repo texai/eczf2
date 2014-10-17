@@ -30,9 +30,11 @@ class Login extends Form {
         $rememberme->setLabel('Recordar');
         $this->add($rememberme);
         
-        $token = new \Zend\Form\Element\Csrf('token');
-        $token->setOption('timeout', '600');
-        $this->add($token);
+        if(APPLICATION_ENV!='testing'){
+            $token = new \Zend\Form\Element\Csrf('token');
+            $token->setOption('timeout', '600');
+            $this->add($token);
+        }
         
         $enviar = new \Zend\Form\Element\Submit('enviar');
         $enviar->setValue('LogIn');

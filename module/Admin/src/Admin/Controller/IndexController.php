@@ -29,12 +29,12 @@ class IndexController extends AbstractActionController
         $estoyLogueado = $auth->hasIdentity();
         $view->isAuth = $auth->hasIdentity();
         
-        var_dump('estoyLogueado');
-        var_dump($estoyLogueado);
+//        var_dump('estoyLogueado');
+//        var_dump($estoyLogueado);
         
         if($estoyLogueado){
-            var_dump('$auth->getStorage()->read()');
-            var_dump($auth->getStorage()->read());
+//            var_dump('$auth->getStorage()->read()');
+//            var_dump($auth->getStorage()->read());
         }
         
         
@@ -52,6 +52,12 @@ class IndexController extends AbstractActionController
     
     public function loginAction()
     {
+        
+        if(1){
+//            throw new \Exception('Algo salio mal');
+//            4/0;
+        }
+        
         $this->layout('login');
         $sl = $this->getServiceLocator();
         $vhm = $sl->get('viewHelperManager');
