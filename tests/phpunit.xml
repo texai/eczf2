@@ -1,3 +1,5 @@
+<!--   ./vendor/bin/phpunit -c tests/phpunit.xml       -->
+
 <phpunit
     bootstrap="./Bootstrap.php"
     colors="true"
